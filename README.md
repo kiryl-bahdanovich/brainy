@@ -1,18 +1,21 @@
 # Brainy
 
-**Personal life-OS research prototype** — personal sources flow into durable storage; an LLM provides grounded access over that graph, not over chat history alone.
+**Your life, remembered.**  
+One private place for the things that matter — and an assistant that can actually find them.
 
-> **Status:** early research prototype. Repository layout, workflows, and integrations may change without backward compatibility. This is not a commercial product and does not provide medical or clinical advice.
+> **Note:** Brainy is an early research project. Things may change as it grows. It is not a commercial product and does not offer medical advice.
 
 ---
 
-## Idea
+## What it is
 
-Brainy explores a personal second brain where documents, internet context, lab results, nutrition logs, media, manual input, and (later) wearable signals merge into one storage layer. A CORE stack — LLM, skills, agents, cloud runtime, and storage — works over those sources so recall compounds over time instead of vanishing into disposable conversation history.
+Most chat assistants forget. They live in the moment, then move on.
 
-The point is grounded access to *your* data: searchable history, decisions, and source nodes you can return to — not another chatbot that only remembers the current thread.
+Brainy is different. It keeps your notes, documents, health logs, meals, photos, and day-to-day thoughts in one home that belongs to you. Then you simply ask — and the assistant answers from *your* information, not from a fading conversation.
 
-This repository is open source so the platform can grow through integrations with external systems. There is no hosted SaaS. You fork the project, connect your own sources, and run the stack yourself.
+Over time, that home gets richer. Yesterday’s decision. Last month’s lab result. A note you almost forgot. Still there. Still searchable. Still yours.
+
+This project is open source so anyone can connect new apps and devices. There is no company cloud selling access to your life. You make your own copy, set it up for yourself, and keep control.
 
 ```mermaid
 flowchart LR
@@ -25,56 +28,58 @@ flowchart LR
 
 ---
 
-## Current architecture
+## How it works today
 
-| Role | Tool |
-|------|------|
-| Data storage / source of truth | GitHub repository |
-| AI orchestrator | Cursor (Cloud Agent connected to the repo) |
-| Deterministic workflows | Cursor Skills |
-| Repository visualizer | Obsidian (vault over the local clone) |
+Three familiar tools, one personal system:
 
-**How it works today**
+| What it does for you | Tool |
+|----------------------|------|
+| Keeps your information safe and lasting | GitHub |
+| The assistant you talk to | Cursor (Cloud Agent) |
+| Repeatable routines the assistant can follow | Cursor Skills |
+| A clear view of your notes and links | Obsidian |
 
-1. Your personal data lives in a GitHub repository (the durable graph / source of truth).
-2. A **Cursor Cloud Agent** connected to that repository acts as the assistant: it reads and updates the repo with LLM-backed reasoning.
-3. **Cursor Skills** encode deterministic workflows so repeated tasks stay consistent.
-4. **Obsidian** opens the same repository as a vault for browsing, linking, and graph navigation.
+1. Your information lives in a GitHub repository — a private library that lasts.
+2. You talk to a **Cursor Cloud Agent** linked to that library. It can read what you have and write new things down.
+3. **Cursor Skills** teach the assistant reliable steps for tasks you do often.
+4. **Obsidian** lets you browse and connect your notes visually.
 
-Cursor can be installed on a mobile phone, so the same assistant is available from your pocket — chat with the Cloud Agent against your repo without sitting at a desktop.
+You can also add documents and information to GitHub yourself — from VS Code, or any other tool that works with Git. The assistant and you share the same library.
 
-Your fork is your Brain. Nothing is shared through a multi-tenant service.
+Cursor also works on a phone. The same assistant is with you when you are not at a desk.
+
+Your copy is your Brain. It is not shared with anyone else through a shared service.
 
 ---
 
 ## Getting started
 
-Expect the directory layout and skills to evolve as the prototype matures.
+The layout of this project will evolve. That is expected.
 
-1. **Fork** this repository on GitHub.
-2. **Clone** your fork locally.
-3. **Open the clone in Obsidian** as a vault (root of the repository).
-4. **Connect Cursor** to your GitHub repository and enable a Cloud Agent against that repo.
-5. **Add your data and skills** as structure lands in the project — personal notes, exports, and deterministic workflows you care about.
-6. **Keep secrets out of git.** Do not commit credentials or local-only files; use patterns already covered in [`.gitignore`](.gitignore) (for example `.env`).
+1. **Make your own copy** of this repository on GitHub (Fork).
+2. **Download it** to your computer (Clone).
+3. **Open it in Obsidian** as a vault — use the folder of the project.
+4. **Connect Cursor** to your GitHub repository and turn on a Cloud Agent for it.
+5. **Add what matters to you** — notes, files, and routines — as the structure appears.
+6. **Keep passwords and private keys out of the repository.** See [`.gitignore`](.gitignore) (for example, `.env` files).
 
 ---
 
-## Roadmap
+## What’s next
 
-Planned directions (subject to change):
+Ideas on the horizon (subject to change):
 
-- Wearable integrations (sleep, workouts, heart rate) as optional source nodes
-- Broader personal-information sources: labs, nutrition, media libraries, internet ingest
-- Open integrations with external systems — contributed or personal forks extend the graph
+- Watches and wearables — sleep, workouts, heart rate — when you want them
+- More of your personal world: labs, nutrition, media, and things from the web
+- New connections to other apps and services, built by you or the community
 
-**SaaS is not planned.** Distribution model remains fork, configure, and self-host your own stack.
+**There will be no Brainy cloud service to sign up for.** You run your own. That is the point.
 
 ---
 
 ## Contributing
 
-This is a research prototype. Ideas, integrations, and improvements that fit a self-owned personal data graph are welcome via issues and pull requests. Expect breaking changes while the architecture settles.
+Brainy is a research project. Ideas and improvements that help people keep a personal, self-owned memory are welcome. Expect change while the design settles.
 
 ---
 
