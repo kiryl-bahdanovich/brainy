@@ -44,6 +44,10 @@ Three familiar tools, one personal system:
 3. **Cursor Skills** teach the assistant reliable steps for tasks you do often.
 4. **Obsidian** lets you browse and connect your notes visually.
 
+Folder [`AGENTS.md`](./AGENTS.md) files are **guides** (what belongs where) — not
+file indexes. The assistant finds notes with hub + frontmatter search (`brain-search`).
+There are no separate `INDEX.md` inventories to maintain.
+
 You can also add documents and information to GitHub yourself — from VS Code, or any other tool that works with Git. The assistant and you share the same library.
 
 Cursor also works on a phone. The same assistant is with you when you are not at a desk.
@@ -56,12 +60,19 @@ Your copy is your Brain. It is not shared with anyone else through a shared serv
 
 The layout of this project will evolve. That is expected.
 
-1. **Make your own copy** of this repository on GitHub (Fork).
+1. **Make your own copy** of this repository on GitHub (Fork). Prefer a
+   **private** repo for a real personal Brain.
 2. **Download it** to your computer (Clone).
-3. **Open it in Obsidian** as a vault — use the folder of the project.
-4. **Connect Cursor** to your GitHub repository and turn on a Cloud Agent for it.
-5. **Add what matters to you** — notes, files, and routines — as the structure appears.
-6. **Keep passwords and private keys out of the repository.** See [`.gitignore`](.gitignore) (for example, `.env` files).
+3. **Configure your profile** in [`ABOUT.md`](./ABOUT.md) - who you are,
+   priorities, health/diet/timezone, and how the assistant should work with
+   you. Skills use this file as personal context; leave nothing sensitive in
+   a public fork.
+4. **Open it in Obsidian** as a vault - use the folder of the project.
+5. **Connect Cursor** to your GitHub repository and turn on a Cloud Agent for it.
+6. **Add what matters to you** - notes, files, and routines - as the structure
+   appears.
+7. **Keep passwords and private keys out of the repository.** See
+   [`.gitignore`](.gitignore) (for example, `.env` files).
 
 ---
 
