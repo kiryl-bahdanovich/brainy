@@ -16,7 +16,7 @@ GitHub clones. Follow proactively for any edit that may land in git.
 
 Applies to:
 
-1. **This Obsidian vault** (`brainy`)
+1. **This Obsidian vault** (`selfbrain`)
 
 ## New files (hard gate)
 

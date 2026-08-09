@@ -1,4 +1,4 @@
-# Brainy
+# Selfbrain
 
 Personal knowledge vault. Prefer skills under `.cursor/skills/` for detailed workflows.
 

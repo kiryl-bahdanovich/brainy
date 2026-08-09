@@ -1,9 +1,9 @@
-# Brainy
+# Selfbrain
 
 **Your life, remembered.**  
 One private place for the things that matter — and an assistant that can actually find them.
 
-> **Note:** Brainy is an early research project. Things may change as it grows. It is not a commercial product and does not offer medical advice.
+> **Note:** Selfbrain is an early research project. Things may change as it grows. It is not a commercial product and does not offer medical advice.
 
 ---
 
@@ -11,7 +11,7 @@ One private place for the things that matter — and an assistant that can actua
 
 Most chat assistants forget. They live in the moment, then move on.
 
-Brainy is different. It keeps your notes, documents, health logs, meals, photos, and day-to-day thoughts in one home that belongs to you. Then you simply ask — and the assistant answers from *your* information, not from a fading conversation.
+Selfbrain is different. It keeps your notes, documents, health logs, meals, photos, and day-to-day thoughts in one home that belongs to you. Then you simply ask — and the assistant answers from *your* information, not from a fading conversation.
 
 Over time, that home gets richer. Yesterday’s decision. Last month’s lab result. A note you almost forgot. Still there. Still searchable. Still yours.
 
@@ -47,6 +47,14 @@ Folder [`AGENTS.md`](./AGENTS.md) files are **guides** (what belongs where) — 
 file indexes. The assistant finds notes with hub + frontmatter search (`brain-search`).
 There are no separate `INDEX.md` inventories to maintain.
 
+**What’s in the vault today.** Personal hubs on disk: `calendar/`, `career/`,
+`documents/`, `finance/`, `health/`, `internet/`, `manual/`, `media/`,
+`sensors/`, `social/`, `statistics/`, and `wiki/`. Roles and boundaries live in
+[`AGENTS.md`](./AGENTS.md) — not a second inventory here. Repeatable routines
+live under [`.cursor/skills/`](./.cursor/skills/) (for example: search and add
+notes, meal logging, health advice, and Strava CSV in `sensors/` → a wiki
+summary).
+
 You can also add documents and information to GitHub yourself — from VS Code, or any other tool that works with Git. The assistant and you share the same library.
 
 Cursor also works on a phone. The same assistant is with you when you are not at a desk.
@@ -79,17 +87,17 @@ The layout of this project will evolve. That is expected.
 
 Ideas on the horizon (subject to change):
 
-- Watches and wearables — sleep, workouts, heart rate — under `sensors/`
-- More of your personal world: labs, nutrition, media, and things from the web
-- New connections to other apps and services, built by you or the community
+- Deeper device and app connectors — beyond dropping exports into `sensors/` and similar hubs
+- Richer synthesis across hubs — more wiki pages built from raw sources
+- Community-built integrations with other apps and services
 
-**There will be no Brainy cloud service to sign up for.** You run your own. That is the point.
+**There will be no Selfbrain cloud service to sign up for.** You run your own. That is the point.
 
 ---
 
 ## Contributing
 
-Brainy is a research project. Ideas and improvements that help people keep a personal, self-owned memory are welcome. Expect change while the design settles.
+Selfbrain is a research project. Ideas and improvements that help people keep a personal, self-owned memory are welcome. Expect change while the design settles.
 
 ---
 
