@@ -39,7 +39,7 @@ Agent tooling (not personal sources): [`.cursor/skills/`](./.cursor/skills/), [`
 | [`brain-fix`](./.cursor/skills/brain-fix/SKILL.md) | Proofread notes; sanitize asset filenames |
 | [`brain-github`](./.cursor/skills/brain-github/SKILL.md) | Feature branch, PR, and merge workflow |
 | [`brain-goal`](./.cursor/skills/brain-goal/SKILL.md) | Multi-approach problem solving via hubs + vault notes |
-| [`brain-health`](./.cursor/skills/brain-health/SKILL.md) | Health advice + per-meal notes under health/ |
+| [`brain-health`](./.cursor/skills/brain-health/SKILL.md) | Health advice + meal notes under health/; Strava CSV (`sensors/`) → wiki summary |
 | [`brain-init`](./.cursor/skills/brain-init/SKILL.md) | Sync AGENTS.md / skills with on-disk layout |
 | [`brain-search`](./.cursor/skills/brain-search/SKILL.md) | Find notes via folder hubs + frontmatter only |
 | [`brain-soul`](./.cursor/skills/brain-soul/SKILL.md) | Companion opinion grounded in ABOUT.md |

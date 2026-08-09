@@ -4,22 +4,25 @@ description: >-
   Health skill: (1) safe health/nutrition advice with evidence tiers, confidence
   calibration, risk classification, and red-flag escalation; (2) meal logging as
   one note per meal under health/ (YAML frontmatter + BJU/kcal) plus optional
-  .audit/ events. Use for diet, supplements, symptoms, labs, weight, fitness
-  nutrition, medical-adjacent questions, meal photos, macro tracking, or when
-  the user names brain-health.
+  .audit/ events; (3) Strava activity processing from sensors/ CSV into a wiki
+  summary via scripts/strava_analyze.py. Use for diet, supplements, symptoms,
+  labs, weight, fitness nutrition, Strava/workouts, medical-adjacent questions,
+  meal photos, macro tracking, or when the user names brain-health.
 ---
 
 # Brain Health
 
-Two modes in one skill:
+Three modes in one skill:
 
 | Mode | When |
 |------|------|
 | **advice** | Diet, supplements, symptoms, labs, weight, fitness fueling, medical-adjacent questions |
 | **log** | Meal/drink photo or explicit request to log food / macros / calories |
+| **strava** | Process / analyze Strava activities export; refresh workout wiki summary |
 
-If both apply (e.g. meal photo plus "is this OK for me?"), run **log** first, then
-**advice** with estimation safety.
+If meal photo plus advice apply, run **log** first, then **advice** with estimation
+safety. If Strava processing plus advice apply, run **strava** first so advice
+can cite the refreshed summary.
 
 Match the user's language.
 
@@ -91,7 +94,8 @@ Vault sources (read when relevant, do not invent):
 
 - [`ABOUT.md`](../../../ABOUT.md) - age, region, diet preferences, recurring foods
 - [`health/`](../../../health/) - labs, imaging, per-meal notes
-- [`sensors/`](../../../sensors/) - wearable / sensor device exports
+- [`sensors/`](../../../sensors/) - wearable / sensor device exports (incl. Strava CSV)
+- [`wiki/strava-workouts.md`](../../../wiki/strava-workouts.md) - synthesized Strava summary when present
 - [`health/AGENTS.md`](../../../health/AGENTS.md) - folder guide only (not an index)
 - Other content folders via skill `brain-search`
 
@@ -271,15 +275,84 @@ created: YYYY-MM-DD
 
 ---
 
+## Mode: strava (activity processing)
+
+### Scope
+
+Apply when the user asks to process / analyze / refresh Strava activities,
+workouts export, or update the workout wiki page from a Strava CSV.
+
+Do **not** invent activity numbers. Prefer the analyzer script over hand-rolled
+tables. Raw CSV stays in `sensors/`; the synthesized page belongs in `wiki/`.
+
+### Placement
+
+| Artifact | Location | Notes |
+|----------|----------|-------|
+| Strava export CSV | `sensors/` | Prefer `strava-activities.csv` (see [`sensors/AGENTS.md`](../../../sensors/AGENTS.md)) |
+| Synthesized summary | `wiki/strava-workouts.md` | Frontmatter via script / `brain-add` conventions |
+
+### Script
+
+[`scripts/strava_analyze.py`](./scripts/strava_analyze.py)
+
+```bash
+# From vault root - discover sensors/*strava*.csv and write wiki page
+python3 .cursor/skills/brain-health/scripts/strava_analyze.py --out wiki/strava-workouts.md
+
+# Explicit paths
+python3 .cursor/skills/brain-health/scripts/strava_analyze.py \
+  --csv sensors/strava-activities.csv --out wiki/strava-workouts.md
+
+# Body only (stdout) for chat preview
+python3 .cursor/skills/brain-health/scripts/strava_analyze.py --stdout
+```
+
+Accepts Russian and English Strava column names / date formats. On `--out`,
+preserves existing `created:` when updating the wiki note.
+
+### Workflow
+
+1. **Branch** - if creating `wiki/strava-workouts.md` (or a new CSV under
+   `sensors/`) while on `main` / `master`, create/check out a feature branch
+   first (skill `brain-github`).
+2. **Locate CSV** - prefer path the user gave; else look under `sensors/` for
+   `strava-activities.csv` / `strava_activities.csv` / `*strava*.csv`. If
+   missing, ask the user to drop the export into `sensors/` (no spaces in the
+   filename).
+3. **Sanitize name** - if the CSV filename has spaces, rename per
+   `brain-form` Step 2 / sensors naming before analyzing.
+4. **Run analyzer** with `--out wiki/strava-workouts.md` (create or update).
+5. **Verify** - read the wiki note frontmatter (`title`, `description`,
+   `status`, `tags` including `wiki`, `created`, `source`). Do **not** append
+   anything to `sensors/AGENTS.md` or `wiki/AGENTS.md`.
+6. **Reply** - short headline (activity count, date range, total km / hours),
+   path to the CSV and wiki page, and how to refresh after the next export.
+7. **Advice handoff** - if the user also asked for training/nutrition advice,
+   continue in **advice** mode using the wiki summary + `ABOUT.md` (do not
+   re-parse the full CSV by hand).
+
+### Strava checklist
+
+- [ ] CSV found or requested under `sensors/`
+- [ ] Filename has no spaces
+- [ ] Feature branch if creating new tracked files on `main` / `master`
+- [ ] `strava_analyze.py --out wiki/strava-workouts.md` succeeded
+- [ ] Wiki note has valid frontmatter; `created` preserved on update
+- [ ] Did not write inventories into hub `AGENTS.md`
+- [ ] Short summary + paths returned to the user
+
+---
+
 ## Interaction with other skills
 
 | Skill | Rule |
 |-------|------|
 | `brain-critical` | User asserts a health conclusion as settled - optional **probe** |
-| `brain-search` | Find vault health notes before personalizing advice |
-| `brain-audit` | Meal log may create `.audit/` events; do not auto-log advice chats |
-| `brain-add` | Persist protocols to `health/` or `manual/` only when user asks |
-| `brain-fix` | Step 1 on new `.audit/` meal notes |
+| `brain-search` | Find vault health / wiki / sensors notes before personalizing advice |
+| `brain-audit` | Meal log may create `.audit/` events; do not auto-log advice chats or Strava refreshes |
+| `brain-add` | Persist protocols to `health/` or `manual/` only when user asks; Strava wiki page is written by the analyzer (same frontmatter rules) |
+| `brain-form` | Step 1 on new `.audit/` meal notes; Step 2 if Strava CSV filename has spaces |
 
 ## Constraints
 
@@ -289,3 +362,4 @@ created: YYYY-MM-DD
   **minimum** missing facts needed for a safe answer
 - When vault medical data is absent, say so - do not assume normal labs or health
 - One meal = one note under `health/` (never a shared meal log file)
+- Strava raw exports stay in `sensors/`; synthesized tables go to `wiki/`

@@ -32,6 +32,8 @@ zone for device reports over time.
 
 - Find sensor notes via skill `brain-search` (hub `sensors` + frontmatter)
 - Health interpretation of sensor trends may use `brain-health` (data stays here)
+- Strava CSV → wiki summary: `brain-health` **strava** mode
+  (`.cursor/skills/brain-health/scripts/strava_analyze.py`)
 
 ## Shared rules
 
