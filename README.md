@@ -17,14 +17,13 @@ Over time, that home gets richer. Yesterday’s decision. Last month’s lab res
 
 This project is open source so anyone can connect new apps and devices. There is no company cloud selling access to your life. You make your own copy, set it up for yourself, and keep control.
 
-```mermaid
-flowchart LR
-  you[You] <-->|"chat"| cursor[CursorCloudAgent]
-  sources[PersonalSources] --> cursor
-  skills[CursorSkills] --> cursor
-  cursor -->|"read and write"| github[GitHubRepo]
-  github --> obsidian[ObsidianVault]
-```
+| From | Relationship | To |
+|------|--------------|-----|
+| You | chat (both ways) | Cursor Cloud Agent |
+| Personal sources | feed | Cursor Cloud Agent |
+| Cursor Skills | guide | Cursor Cloud Agent |
+| Cursor Cloud Agent | read and write | GitHub repo |
+| GitHub repo | viewed as | Obsidian vault |
 
 ---
 
