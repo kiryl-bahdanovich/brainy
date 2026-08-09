@@ -7,6 +7,34 @@ One private place for the things that matter — and an assistant that can actua
 
 ---
 
+## Getting started
+
+The layout of this project will evolve. That is expected.
+
+1. **Make your own copy** of this repository on GitHub (Fork). Prefer a
+   **private** repo for a real personal Brain.
+2. **Download it** to your computer (Clone).
+3. **Configure your profile** in [`ABOUT.md`](./ABOUT.md) - who you are,
+   priorities, health/diet/timezone, and how the assistant should work with
+   you. Skills use this file as personal context; leave nothing sensitive in
+   a public fork.
+4. **Upload your documents** into the hub folders on disk (`health/`,
+   `documents/`, `finance/`, and the rest) - via Git, VS Code, Obsidian, or
+   any tool that writes to the repo. Put real files in place before you rely
+   on the assistant to search or organize them.
+5. **Connect Cursor** to your GitHub repository and turn on a Cloud Agent for it.
+6. **Run [`brain-init`](./.cursor/skills/brain-init/SKILL.md) first** - ask the
+   agent to init or sync so folder guides, skills, and layout docs match what
+   is actually on disk. Do this before search, meal logging, or other skills.
+7. **Add what matters to you** - notes, files, and routines - as the structure
+   appears.
+8. **Ask your repo** - use the Cursor agent for any questions. It answers from
+   your notes and files, not from a fading chat.
+9. **Keep passwords and private keys out of the repository.** See
+   [`.gitignore`](.gitignore) (for example, `.env` files).
+
+---
+
 ## What it is
 
 Most chat assistants forget. They live in the moment, then move on.
@@ -60,26 +88,6 @@ You can also add documents and information to GitHub yourself — from VS Code, 
 Cursor also works on a phone. The same assistant is with you when you are not at a desk.
 
 Your copy is your Brain. It is not shared with anyone else through a shared service.
-
----
-
-## Getting started
-
-The layout of this project will evolve. That is expected.
-
-1. **Make your own copy** of this repository on GitHub (Fork). Prefer a
-   **private** repo for a real personal Brain.
-2. **Download it** to your computer (Clone).
-3. **Configure your profile** in [`ABOUT.md`](./ABOUT.md) - who you are,
-   priorities, health/diet/timezone, and how the assistant should work with
-   you. Skills use this file as personal context; leave nothing sensitive in
-   a public fork.
-4. **Open it in Obsidian** as a vault - use the folder of the project.
-5. **Connect Cursor** to your GitHub repository and turn on a Cloud Agent for it.
-6. **Add what matters to you** - notes, files, and routines - as the structure
-   appears.
-7. **Keep passwords and private keys out of the repository.** See
-   [`.gitignore`](.gitignore) (for example, `.env` files).
 
 ---
 
