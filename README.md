@@ -87,9 +87,13 @@ The layout of this project will evolve. That is expected.
 
 Ideas on the horizon (subject to change):
 
-- Deeper device and app connectors — beyond dropping exports into `sensors/` and similar hubs
+- **Plug-and-play extensions for integrations** — a lightweight plugin format
+  (manifest, target hubs, optional scripts/skills) so app and device connectors
+  install with minimal wiring; share or drop in community extensions without
+  forking the whole vault
 - Richer synthesis across hubs — more wiki pages built from raw sources
-- Community-built integrations with other apps and services
+- Scheduled sync and transform pipelines — beyond one-off exports into
+  `sensors/` and similar hubs
 
 **There will be no Selfbrain cloud service to sign up for.** You run your own. That is the point.
 
