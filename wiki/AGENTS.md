@@ -34,6 +34,7 @@ layer - not the landing zone for raw exports or scratch notes.
 
 - Create / update wiki pages via skill `brain-add` (hub `wiki`)
 - Find wiki pages via skill `brain-search` (hub `wiki` + frontmatter)
+- Strava CSV in [`../sensors/`](../sensors/) → workout summary page via `brain-health` **strava** mode
 
 ## Shared rules
 
