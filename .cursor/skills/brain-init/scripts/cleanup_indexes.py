@@ -20,10 +20,11 @@ CONTENT_ROLES = {
     "career": "work, brand, business: reviews, offers, content drafts, consulting pipeline",
     "documents": "books, contracts, and other documents (PDFs, scans)",
     "finance": "income, expenses, statements, money exports",
-    "health": "medical records, nutrition log, wearables / activity exports",
+    "health": "medical records, nutrition log",
     "internet": "saved web articles and excerpts",
     "manual": "hand-written notes and journals",
     "media": "photos, audio, and other media",
+    "sensors": "wearable and personal sensor device data / exports",
     "social": "people, relationships, messages and social context",
     "statistics": "external reports and datasets (PDFs, spreadsheets)",
 }

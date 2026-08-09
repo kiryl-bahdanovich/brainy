@@ -3,8 +3,9 @@ name: brain-add
 description: >-
   Add or update Markdown notes (and place related files) into the vault's
   personal data folders - calendar, career, documents, finance, health,
-  internet, manual, media, social, statistics - with YAML frontmatter where
-  applicable. Chooses the folder from root and local AGENTS.md placement rules.
+  internet, manual, media, sensors, social, statistics - with YAML frontmatter
+  where applicable. Chooses the folder from root and local AGENTS.md placement
+  rules.
   Use when creating, editing, drafting, filing, or publishing notes or source
   files in those folders, or when the user asks to add frontmatter to a note.
 ---
@@ -21,10 +22,11 @@ Apply to new or updated content under these **personal data** folders only:
 | `career/` | Work, brand, business artifacts |
 | `documents/` | Books, contracts, formal scans/PDFs |
 | `finance/` | Income, expenses, statements, money exports |
-| `health/` | Labs, meal notes, wearables (meal photos/macros → prefer `brain-health`) |
+| `health/` | Labs, meal notes (meal photos/macros → prefer `brain-health`) |
 | `internet/` | Saved web articles and excerpts |
 | `manual/` | Hand-written notes, journals, self-authored prose |
 | `media/` | Photos/audio/video without a stronger domain home |
+| `sensors/` | Wearable and personal sensor device exports |
 | `social/` | People, relationships, message exports |
 | `statistics/` | External reports and datasets (not personal logs) |
 
@@ -55,7 +57,8 @@ Life-event logs go to `.audit/` via skill `brain-audit` - not via brain-add.
    - Money → `finance/`
    - Career / brand / business artifacts → `career/`
    - Legal / books archive → `documents/`
-   - Labs / personal health data / wearables → `health/`
+   - Labs / personal health data / meals → `health/`
+   - Wearables / sensor device exports → `sensors/`
    - World reports / datasets → `statistics/`
    - Web clips (not your prose) → `internet/`
    - Your own prose / decisions / journal → `manual/`
@@ -105,7 +108,7 @@ folder name** as one tag (e.g. note in `career/` → tag `career`).
 Folder tags (required one matching the file's folder):
 
 - `calendar`, `career`, `documents`, `finance`, `health`, `internet`,
-  `manual`, `media`, `social`, `statistics`
+  `manual`, `media`, `sensors`, `social`, `statistics`
 
 Optional cross-cutting tags:
 
@@ -175,7 +178,7 @@ For binaries: skip Step 1; run Step 2 only if the filename needs sanitizing.
 Before finishing:
 
 - [ ] Target folder exists on disk and matches its local `AGENTS.md`
-- [ ] File is under one of the ten personal data folders (not a invented path)
+- [ ] File is under one of the personal data folders (not an invented path)
 - [ ] Specialized cases deferred (`brain-health` meal log, etc.) when required
 - [ ] Markdown has valid YAML frontmatter with all required fields
 - [ ] `created` is `YYYY-MM-DD` and not clobbered on update

@@ -34,8 +34,8 @@ From the vault root, discover reality with shell/`Glob` (ignore `.git`,
 
 1. **Top-level content folders** when present: `calendar/`, `career/`,
    `documents/`, `finance/`, `health/`, `internet/`, `manual/`, `media/`,
-   `social/`, `statistics/`. Each should have a local `AGENTS.md`. Do **not**
-   create `index.md` or root `INDEX.md`.
+   `sensors/`, `social/`, `statistics/`. Each should have a local `AGENTS.md`.
+   Do **not** create `index.md` or root `INDEX.md`.
 2. **Agent tooling**: `.cursor/skills/`, `.audit/` (life-event journal; not a
    content folder).
 3. **Skills**: every directory under `.cursor/skills/*/SKILL.md`. Record `name`

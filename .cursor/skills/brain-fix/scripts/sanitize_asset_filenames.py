@@ -26,6 +26,7 @@ ASSET_FOLDERS = (
     "internet",
     "manual",
     "media",
+    "sensors",
     "social",
     "statistics",
 )

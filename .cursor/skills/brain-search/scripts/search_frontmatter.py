@@ -26,6 +26,7 @@ CONTENT_HUBS = (
     "internet",
     "manual",
     "media",
+    "sensors",
     "social",
     "statistics",
 )

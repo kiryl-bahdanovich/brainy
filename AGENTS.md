@@ -20,10 +20,11 @@ frontmatter only).
 | [`career/`](./career/) | Work, brand, business (reviews, offers, drafts, consulting) | [`AGENTS.md`](./career/AGENTS.md) |
 | [`documents/`](./documents/) | Books, contracts, formal scans/PDFs | [`AGENTS.md`](./documents/AGENTS.md) |
 | [`finance/`](./finance/) | Income, expenses, statements, money exports | [`AGENTS.md`](./finance/AGENTS.md) |
-| [`health/`](./health/) | Medical records, nutrition, wearables | [`AGENTS.md`](./health/AGENTS.md) |
+| [`health/`](./health/) | Medical records, nutrition | [`AGENTS.md`](./health/AGENTS.md) |
 | [`internet/`](./internet/) | Saved web articles and excerpts | [`AGENTS.md`](./internet/AGENTS.md) |
 | [`manual/`](./manual/) | Hand-written notes and journals | [`AGENTS.md`](./manual/AGENTS.md) |
 | [`media/`](./media/) | Photos, audio, and other media without a stronger domain | [`AGENTS.md`](./media/AGENTS.md) |
+| [`sensors/`](./sensors/) | Wearable and personal sensor device data | [`AGENTS.md`](./sensors/AGENTS.md) |
 | [`social/`](./social/) | People, relationships, messages | [`AGENTS.md`](./social/AGENTS.md) |
 | [`statistics/`](./statistics/) | External reports and datasets (not personal logs) | [`AGENTS.md`](./statistics/AGENTS.md) |
 
@@ -55,7 +56,7 @@ Quick boundary reminders:
 
 - When / schedule → `calendar/` · Who / relationship → `social/` · Money → `finance/`
 - Career / brand / business artifacts → `career/` · Legal/books archive → `documents/`
-- Labs / meal notes / Strava → `health/` · World reports/datasets → `statistics/`
+- Labs / meal notes → `health/` · Wearables / sensors → `sensors/` · World reports/datasets → `statistics/`
 - Web clips → `internet/` · Your own prose → `manual/` · Orphan media → `media/`
 
 ## Processing

@@ -2,16 +2,16 @@
 
 ## Purpose
 
-Body and health sources: clinical, nutrition, wearables/activity.
+Body and health sources: clinical records and nutrition.
 
 ## Put here
 
 - Labs, imaging, clinical PDFs and reports
 - One Markdown note per meal/drink when logging food (skill `brain-health` log mode)
-- Strava / wearable CSV or exports (sleep, HR, workouts)
 
 ## Do not put here
 
+- Wearable / sensor device exports → [`../sensors/`](../sensors/)
 - Generic photos with no health meaning → [`../media/`](../media/)
 - Public health statistics about the world → [`../statistics/`](../statistics/)
 - Diet opinions without personal data → [`../manual/`](../manual/) or [`../internet/`](../internet/)
@@ -21,7 +21,6 @@ Body and health sources: clinical, nutrition, wearables/activity.
 ## Naming (important - flat folder)
 
 - Labs: `lab-YYYY-MM-DD-slug.pdf`
-- Wearables: `strava-activities.csv`, `YYYY-MM-sleep-export.csv`
 - Meals: `YYYY-MM-DD-meal-slug.md` / `YYYY-MM-DD-drink-slug.md` (frontmatter required)
 - Do not archive meal photos unless the user asks
 
@@ -29,6 +28,7 @@ Body and health sources: clinical, nutrition, wearables/activity.
 
 - `brain-health` - safe health advice and per-meal notes under this folder
 - Find past meals via skill `brain-search` (hub `health` + frontmatter)
+- Wearable raw data lives in [`../sensors/`](../sensors/); search hub `sensors` when needed
 
 ## Shared rules
 

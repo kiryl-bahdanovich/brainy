@@ -90,7 +90,8 @@ pregnancy/breastfeeding, family history, recent labs, activity level.
 Vault sources (read when relevant, do not invent):
 
 - [`ABOUT.md`](../../../ABOUT.md) - age, region, diet preferences, recurring foods
-- [`health/`](../../../health/) - labs, imaging, per-meal notes, wearables
+- [`health/`](../../../health/) - labs, imaging, per-meal notes
+- [`sensors/`](../../../sensors/) - wearable / sensor device exports
 - [`health/AGENTS.md`](../../../health/AGENTS.md) - folder guide only (not an index)
 - Other content folders via skill `brain-search`
 

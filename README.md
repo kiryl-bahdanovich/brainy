@@ -79,7 +79,7 @@ The layout of this project will evolve. That is expected.
 
 Ideas on the horizon (subject to change):
 
-- Watches and wearables — sleep, workouts, heart rate — when you want them
+- Watches and wearables — sleep, workouts, heart rate — under `sensors/`
 - More of your personal world: labs, nutrition, media, and things from the web
 - New connections to other apps and services, built by you or the community
 

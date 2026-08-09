@@ -7,11 +7,12 @@ External reports and datasets about the world - not personal body/money logs.
 ## Put here
 
 - Industry reports, public CSVs, research datasets
-- Benchmarks and spreadsheets that are not your bank/Strava exports
+- Benchmarks and spreadsheets that are not your bank or personal sensor exports
 
 ## Do not put here
 
-- Personal wearable/finance exports → [`../health/`](../health/), [`../finance/`](../finance/)
+- Personal wearable/sensor exports → [`../sensors/`](../sensors/)
+- Personal finance exports → [`../finance/`](../finance/)
 - Books you read as documents → [`../documents/`](../documents/)
 - Clipped articles without data tables → [`../internet/`](../internet/)
 

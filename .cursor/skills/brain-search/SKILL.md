@@ -28,10 +28,11 @@ Personal data folders (each folder is a **hub**):
 | `career/` | Work, brand, business |
 | `documents/` | Books, contracts, formal docs |
 | `finance/` | Money trails |
-| `health/` | Labs, nutrition, wearables |
+| `health/` | Labs, nutrition |
 | `internet/` | Web clips and excerpts |
 | `manual/` | Self-authored notes and journals |
 | `media/` | Orphan photos/audio/video |
+| `sensors/` | Wearable and personal sensor data |
 | `social/` | People and relationships |
 | `statistics/` | External reports and datasets |
 
@@ -46,9 +47,10 @@ filter. Nobody maintains a file list in `AGENTS.md`.
 
 1. **Pick hub(s)** from the query using root [`AGENTS.md`](../../../AGENTS.md)
    placement boundaries (when → calendar, who → social, money → finance, career
-   / brand → career, legal/books → documents, labs/wearables → health, world
-   data → statistics, web clips → internet, own prose → manual, orphan media →
-   media). Folder `AGENTS.md` guides define boundaries only - not note lists.
+   / brand → career, legal/books → documents, labs/meals → health, wearables →
+   sensors, world data → statistics, web clips → internet, own prose → manual,
+   orphan media → media). Folder `AGENTS.md` guides define boundaries only -
+   not note lists.
 2. **Search frontmatter inside those hubs first** (script `--hub` / `--folder`).
 3. If the hub scope is empty or clearly too narrow, expand to **all** content
    hubs once (omit `--hub`).
@@ -114,7 +116,7 @@ The script reads each file only enough to parse the opening YAML block; it does
 
 ## Manual fallback (no script)
 
-1. Pick hub folder(s); else Glob `*/*.md` under the ten content folders.
+1. Pick hub folder(s); else Glob `*/*.md` under the content folders.
 2. Skip `AGENTS.md` and files without opening `---`.
 3. For each candidate, read **only the frontmatter** (stop after the closing
    `---`), or Grep frontmatter-key patterns only.
