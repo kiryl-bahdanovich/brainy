@@ -16,6 +16,7 @@ Formal personal documents: books, contracts, scans, identity/legal papers.
 - Lab results and clinical imaging → [`../health/`](../health/)
 - World reports and public datasets → [`../statistics/`](../statistics/)
 - Career drafts and brand writing → [`../career/`](../career/)
+- Formatted pages synthesized from raw vault sources → [`../wiki/`](../wiki/)
 
 ## Naming
 

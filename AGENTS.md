@@ -27,6 +27,7 @@ frontmatter only).
 | [`sensors/`](./sensors/) | Wearable and personal sensor device data | [`AGENTS.md`](./sensors/AGENTS.md) |
 | [`social/`](./social/) | People, relationships, messages | [`AGENTS.md`](./social/AGENTS.md) |
 | [`statistics/`](./statistics/) | External reports and datasets (not personal logs) | [`AGENTS.md`](./statistics/AGENTS.md) |
+| [`wiki/`](./wiki/) | Formatted docs synthesized from raw sources | [`AGENTS.md`](./wiki/AGENTS.md) |
 
 Agent tooling (not personal sources): [`.cursor/skills/`](./.cursor/skills/), [`.audit/`](./.audit/) (life-event journal via `brain-audit`). Root [`CLAUDE.md`](./CLAUDE.md) points here as the source of truth.
 
@@ -58,6 +59,7 @@ Quick boundary reminders:
 - Career / brand / business artifacts → `career/` · Legal/books archive → `documents/`
 - Labs / meal notes → `health/` · Wearables / sensors → `sensors/` · World reports/datasets → `statistics/`
 - Web clips → `internet/` · Your own prose → `manual/` · Orphan media → `media/`
+- Synthesized / formatted pages from raw sources → `wiki/`
 
 ## Processing
 

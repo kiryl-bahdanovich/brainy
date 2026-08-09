@@ -15,6 +15,7 @@ Body and health sources: clinical records and nutrition.
 - Generic photos with no health meaning → [`../media/`](../media/)
 - Public health statistics about the world → [`../statistics/`](../statistics/)
 - Diet opinions without personal data → [`../manual/`](../manual/) or [`../internet/`](../internet/)
+- Polished health summaries synthesized from labs/sensors → [`../wiki/`](../wiki/)
 - A single aggregate food table (`Food.md` is retired - do not create it)
 - File inventories or index lists (this guide is not an index)
 

@@ -3,9 +3,9 @@ name: brain-add
 description: >-
   Add or update Markdown notes (and place related files) into the vault's
   personal data folders - calendar, career, documents, finance, health,
-  internet, manual, media, sensors, social, statistics - with YAML frontmatter
-  where applicable. Chooses the folder from root and local AGENTS.md placement
-  rules.
+  internet, manual, media, sensors, social, statistics, wiki - with YAML
+  frontmatter where applicable. Chooses the folder from root and local AGENTS.md
+  placement rules.
   Use when creating, editing, drafting, filing, or publishing notes or source
   files in those folders, or when the user asks to add frontmatter to a note.
 ---
@@ -29,6 +29,7 @@ Apply to new or updated content under these **personal data** folders only:
 | `sensors/` | Wearable and personal sensor device exports |
 | `social/` | People, relationships, message exports |
 | `statistics/` | External reports and datasets (not personal logs) |
+| `wiki/` | Formatted docs synthesized from raw sources elsewhere |
 
 **Before every write:** read the target folder's local `AGENTS.md` guide
 (e.g. [`manual/AGENTS.md`](../../../manual/AGENTS.md),
@@ -63,6 +64,7 @@ Life-event logs go to `.audit/` via skill `brain-audit` - not via brain-add.
    - Web clips (not your prose) → `internet/`
    - Your own prose / decisions / journal → `manual/`
    - Orphan media → `media/`
+   - Synthesized / formatted pages from raw sources → `wiki/`
 
 3. **One canonical file per fact** - link or short-pointer from elsewhere; do not
    duplicate the same note into two folders.
@@ -108,7 +110,7 @@ folder name** as one tag (e.g. note in `career/` → tag `career`).
 Folder tags (required one matching the file's folder):
 
 - `calendar`, `career`, `documents`, `finance`, `health`, `internet`,
-  `manual`, `media`, `sensors`, `social`, `statistics`
+  `manual`, `media`, `sensors`, `social`, `statistics`, `wiki`
 
 Optional cross-cutting tags:
 

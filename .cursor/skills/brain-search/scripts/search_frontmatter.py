@@ -29,6 +29,7 @@ CONTENT_HUBS = (
     "sensors",
     "social",
     "statistics",
+    "wiki",
 )
 
 SKIP_NAMES = frozenset({"AGENTS.md", "CLAUDE.md", "INDEX.md", "index.md"})

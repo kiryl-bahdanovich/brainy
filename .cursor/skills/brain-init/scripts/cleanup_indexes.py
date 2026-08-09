@@ -27,6 +27,7 @@ CONTENT_ROLES = {
     "sensors": "wearable and personal sensor device data / exports",
     "social": "people, relationships, messages and social context",
     "statistics": "external reports and datasets (PDFs, spreadsheets)",
+    "wiki": "formatted documents synthesized from raw sources in other hubs",
 }
 
 ROOT_DOCS = ("AGENTS.md", "CLAUDE.md")

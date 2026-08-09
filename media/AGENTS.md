@@ -14,6 +14,7 @@ Raw media carriers without a stronger domain home: photos, audio, video.
 - Clinical images / labs → [`../health/`](../health/)
 - Meal photos by default (`brain-health` log mode does not archive them)
 - Contract scans → [`../documents/`](../documents/)
+- Formatted write-ups derived from media → [`../wiki/`](../wiki/)
 - Prefer domain folder + descriptive name over dumping here
 
 ## Naming

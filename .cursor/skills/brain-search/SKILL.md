@@ -35,6 +35,7 @@ Personal data folders (each folder is a **hub**):
 | `sensors/` | Wearable and personal sensor data |
 | `social/` | People and relationships |
 | `statistics/` | External reports and datasets |
+| `wiki/` | Formatted docs synthesized from raw sources |
 
 Search only `*.md` that have YAML frontmatter. Skip `AGENTS.md` (hub **guides**,
 not inventories), root agent docs, and files without a frontmatter block.
@@ -49,8 +50,8 @@ filter. Nobody maintains a file list in `AGENTS.md`.
    placement boundaries (when → calendar, who → social, money → finance, career
    / brand → career, legal/books → documents, labs/meals → health, wearables →
    sensors, world data → statistics, web clips → internet, own prose → manual,
-   orphan media → media). Folder `AGENTS.md` guides define boundaries only -
-   not note lists.
+   orphan media → media, synthesized pages → wiki). Folder `AGENTS.md` guides
+   define boundaries only - not note lists.
 2. **Search frontmatter inside those hubs first** (script `--hub` / `--folder`).
 3. If the hub scope is empty or clearly too narrow, expand to **all** content
    hubs once (omit `--hub`).

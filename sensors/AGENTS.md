@@ -19,6 +19,7 @@ zone for device reports over time.
 - Public health or world datasets → [`../statistics/`](../statistics/)
 - Money / bank exports → [`../finance/`](../finance/)
 - Orphan photos with no sensor meaning → [`../media/`](../media/)
+- Formatted summaries synthesized from sensor data → [`../wiki/`](../wiki/)
 - File inventories or index lists (this guide is not an index)
 
 ## Naming

@@ -25,6 +25,7 @@ LINK_FOLDERS = (
     "sensors",
     "social",
     "statistics",
+    "wiki",
     ".audit",
 )
 

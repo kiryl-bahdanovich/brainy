@@ -14,6 +14,7 @@ Hand-written notes: thoughts, decisions, journals, self-authored prose.
 
 - Raw web clips → [`../internet/`](../internet/)
 - Binary documents → [`../documents/`](../documents/)
+- Polished pages synthesized from raw sources → [`../wiki/`](../wiki/)
 - Structured money/health/calendar exports → domain folders
 - Career artifacts that are deliverables → [`../career/`](../career/)
 

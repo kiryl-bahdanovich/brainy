@@ -29,6 +29,7 @@ ASSET_FOLDERS = (
     "sensors",
     "social",
     "statistics",
+    "wiki",
 )
 SKIP_DIR_PARTS = {".git", ".obsidian", ".trash", "__pycache__"}
 

@@ -3,7 +3,8 @@ name: brain-goal
 description: >-
   Systematic expert problem-solving using vault notes in personal data folders
   (calendar, career, documents, finance, health, internet, manual, media,
-  sensors, social, statistics). Apply multiple parallel thinking approaches
+  sensors, social, statistics, wiki). Apply multiple parallel thinking
+  approaches
   (First Principles, Analogies, Decomposition, Theory of Constraints,
   Inversion, Design Thinking, Experimental, Systems Thinking) to explore the
   solution space, generate distinct alternatives, critically evaluate them,
@@ -28,7 +29,7 @@ Personal data hubs (same as `brain-search` / `brain-add`):
 
 - `calendar/`, `career/`, `documents/`, `finance/`, `health/`
 - `internet/` (saved web clips), `manual/` (self-authored notes)
-- `media/`, `sensors/`, `social/`, `statistics/`
+- `media/`, `sensors/`, `social/`, `statistics/`, `wiki/` (synthesized pages)
 
 **Fallback** (when vault is insufficient):
 
@@ -126,6 +127,7 @@ When information is insufficient, make reasonable assumptions and clearly mark t
    | Schedule / capacity | `calendar/` |
    | External evidence / clips | `internet/`, `statistics/` |
    | Own decisions / journals | `manual/` |
+   | Synthesized reference pages | `wiki/` |
 
 3. Use skill `brain-search` (frontmatter script) - do **not** body-scan the vault
    to discover notes:

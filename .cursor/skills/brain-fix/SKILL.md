@@ -15,8 +15,8 @@ description: >-
    formatting (Step 1).
 2. **Content folders** (`calendar/`, `career/`, `documents/`, `finance/`,
    `health/`, `internet/`, `manual/`, `media/`, `sensors/`, `social/`,
-   `statistics/`) - filename sanitization without spaces **and** rewrite of
-   all markdown references to those files (Step 2).
+   `statistics/`, `wiki/`) - filename sanitization without spaces **and** rewrite
+   of all markdown references to those files (Step 2).
 
 **Do not** apply Step 2 to `.audit/` event notes: that journal allows spaces in
 `YYYY-MM-DD - Short Title.md` (skill `brain-audit`).
@@ -77,7 +77,7 @@ Manual equivalent if the script cannot run:
 
 1. Target folders (unless the user names specific paths): `calendar/`,
    `career/`, `documents/`, `finance/`, `health/`, `internet/`, `manual/`,
-   `media/`, `sensors/`, `social/`, `statistics/`. Skip `.audit/`.
+   `media/`, `sensors/`, `social/`, `statistics/`, `wiki/`. Skip `.audit/`.
 2. For each file whose **name** contains a space:
    - Replace each run of whitespace with a single `-`
    - Collapse repeated `-` to one `-`
