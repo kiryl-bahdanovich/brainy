@@ -135,7 +135,9 @@ Tags are independent of categories: e.g. salary raise →
 ## Create workflow (log / batch)
 
 1. Parse the event: what happened, when, optional context/outcome, mood /
-   people if given; generate `tags` from context (and existing `.audit/`
+   people if given (if the input is a charged narrative rather than clean
+   facts, run `brain-clarity` first and use its Facts bucket here, mood from
+   its Emotions bucket); generate `tags` from context (and existing `.audit/`
    vocabulary); set `categories` from the allowed list (ask if ambiguous).
 2. Ensure `.audit/` exists (create it if missing; keep `.audit/.gitkeep` if present).
 3. Choose filename: `YYYY-MM-DD - Short Title.md`.

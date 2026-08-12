@@ -218,6 +218,7 @@ Main answer only - nothing worth adding.
 
 | Situation | Rule |
 |-----------|------|
+| `brain-clarity` | Let the Facts/Opinions/Emotions split finish first; soul's opinion comes after, not instead of, the neutral sort |
 | `brain-critical` probe | Soul block = 1-2 questions only; main answer first |
 | `brain-critical` review | User asked explicitly - full review, soul optional |
 | `brain-goal` | Soul may appear in Summary or after Recommendation - do not duplicate the full analysis |

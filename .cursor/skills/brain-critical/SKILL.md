@@ -120,6 +120,7 @@ From the vault protocol - answer all five in **review** mode:
 
 | Skill | Rule |
 |-------|------|
+| `brain-clarity` | When input was a tangled narrative, clarity's Facts bucket is the claim's factual base; brain-critical stress-tests the claim itself, not the raw text |
 | `brain-soul` | Soul runs **probe** on assertions; see soul skill Assertion probes section |
 | `brain-goal` | Use for multi-alternative problems; brain-critical is single-claim lightweight |
 | `brain-add` | **log** mode creates/updates notes (usually under `manual/`) |

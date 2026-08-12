@@ -35,6 +35,7 @@ Agent tooling (not personal sources): [`.cursor/skills/`](./.cursor/skills/), [`
 |-------|------|
 | [`brain-add`](./.cursor/skills/brain-add/SKILL.md) | Add/update notes in content folders with YAML frontmatter |
 | [`brain-audit`](./.cursor/skills/brain-audit/SKILL.md) | Log dated life/work events under `.audit/` |
+| [`brain-clarity`](./.cursor/skills/brain-clarity/SKILL.md) | Split narrative into Facts/Opinions/Emotions per speaker |
 | [`brain-critical`](./.cursor/skills/brain-critical/SKILL.md) | Stress-test claims; calibrate confidence |
 | [`brain-fix`](./.cursor/skills/brain-fix/SKILL.md) | Proofread notes; sanitize asset filenames |
 | [`brain-github`](./.cursor/skills/brain-github/SKILL.md) | Feature branch, PR, and merge workflow |

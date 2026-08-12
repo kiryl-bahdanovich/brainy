@@ -132,9 +132,12 @@ Do not invent tags outside this set.
 2. Choose the destination folder (Placement above); read that folder's `AGENTS.md`.
 3. Choose filename per that guide; if a same-path file exists, **update** it
    instead of duplicating.
-4. For Markdown: write frontmatter first, then body. Set `created` to today
-   (`YYYY-MM-DD`). Defaults when unspecified: `status: draft`, folder tag + any
-   other allowed tags that apply.
+4. For Markdown: write frontmatter first, then body. If the source material is
+   a mixed narrative (facts + judgments + feelings tangled together), run
+   `brain-clarity` first so the note body stays factual and opinions/feelings
+   are labeled, not silently baked in. Set `created` to today (`YYYY-MM-DD`).
+   Defaults when unspecified: `status: draft`, folder tag + any other allowed
+   tags that apply.
 5. For `internet/`: put the URL in `source` (and/or body) when available.
 6. After writing, run post-write cleanup (below).
 
